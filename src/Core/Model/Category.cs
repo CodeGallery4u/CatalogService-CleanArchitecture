@@ -11,6 +11,6 @@ namespace Core.Model
     {
         public Category ParentCategory { get; set; }
 
-        public virtual List<Product> Products { get; set; }
+        public virtual List<Product> Products { get; set; } = new List<Product>();
     }
 }
