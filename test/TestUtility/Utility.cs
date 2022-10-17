@@ -10,7 +10,7 @@ namespace TestUtility
         public static ApplicationDbContext CreateDatabaseContext()
         {
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            optionsBuilder.UseInMemoryDatabase(databaseName: "ShoppingCart.db");
+            optionsBuilder.UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString());
             var context = new ApplicationDbContext(optionsBuilder.Options);
             return context;
         }

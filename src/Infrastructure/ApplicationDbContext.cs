@@ -12,9 +12,9 @@ namespace Infrastructure
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
 
-        public Task<int> SaveChanges()
+        public Task<int> SaveDbChangesAsync()
         {
-            return this.SaveChanges();
+            return SaveChangesAsync();
         }
 
     }

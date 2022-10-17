@@ -15,7 +15,7 @@ namespace Application
         public bool Delete(T entity)
         {
             _context.Set<T>().Remove(entity);
-            _context.SaveChanges();
+            _context.SaveDbChangesAsync();
             return true;
         }
 
@@ -32,7 +32,7 @@ namespace Application
         public T Update(int id, T entity)
         {
             _context.Set<T>().Update(entity);
-            _context.SaveChanges();
+            _context.SaveDbChangesAsync();
             return Get(id);
         }
 

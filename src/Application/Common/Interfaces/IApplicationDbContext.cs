@@ -13,7 +13,7 @@ namespace Application.Common.Interfaces
         DbSet<Category> Categories { get; set; }
         DbSet<Product> Products { get; set; }
 
-        Task<int> SaveChanges();
+        Task<int> SaveDbChangesAsync();
 
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
     }
